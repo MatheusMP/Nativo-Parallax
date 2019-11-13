@@ -1,0 +1,268 @@
+*{
+    outline: none;
+}
+
+html,body{
+    margin: 0;
+    height: 100%;
+}
+html{
+    overflow: hidden;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    
+    z-index: 99;
+}
+
+#header .menu{
+    position: absolute;
+    display: block;
+    left: 35%;
+    width: fit-content;
+    padding-top: 30px;
+    transition: all 1s linear;
+}
+#header .menu.scrollado{
+    left: 10%;
+}
+
+
+#header .menu .menuItem{
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+#header .menu .menuItem a{
+    color: #fff;
+    transition: all 1s linear;
+}
+#header .menu.bgBr .menuItem a{
+    color: darkgreen;
+}
+
+#logo{
+    position: absolute;
+    background-image: url('../imgs/logo_nativo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s linear;
+    z-index: 9;
+}
+#logo.scrollado{
+    left: 90%;
+    top: 23px;
+    transform: inherit;
+    height: 50px;
+    width: 50px;
+}
+#logo.scrollado.bgBr{
+    background-image: url('../imgs/logo_reduzido_verde.png');
+}
+
+#home{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    transition: all 1s linear;
+}
+
+#home.scrollado{
+    top: -100%;
+}
+
+#verText{
+    position: absolute;
+    transform: rotate(-90deg);
+    right: -20px;
+    top: 47%;
+    color: #fff;
+    font-weight: bold;
+    z-index: 999;
+}
+
+#bgVerde{
+    background-image: url('../imgs/GB_.png');
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#luzBg{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+#luzBg.scrollado{
+    display: block;
+}
+
+#luzBg img{
+    width: 100%;
+    opacity: 0.7;
+}
+
+#txtNativo{
+    display: none;
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    z-index: 9;
+    width: 55%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+#txtNativo.scrollado{
+    display: block;
+}
+
+#txtNativo img{
+    width: 100%;
+}
+
+#montanhas{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#montanhas.scrollado{
+    display: block;
+}
+
+#montanhas img{
+    width: 100%;
+    height: -webkit-fill-available;
+}
+
+#balls{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 45%;
+    left: 30%;
+}
+#balls.scrollado{
+    display: block;
+}
+
+#balls img{
+    width: 100%;
+    height: auto;
+}
+
+#loja{
+    position: absolute;
+    background-color: #fafafa;
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    top: 100%;
+    transition: all 1s linear;
+    z-index: 9;
+}
+#loja.scrollado{
+    top: 0;
+}
+
+#loja .produtos{
+    position: relative;
+    width: 75%;
+    height: 100px;
+    margin: auto;
+    margin-top: 8%;
+}
+
+#loja .produtos .title{
+    width: 100%;
+}
+
+#loja .produtos .title h3{
+    display: inline-block;
+    color: #333;
+    font-size: 2rem;
+    margin: 0;
+}
+#loja .produtos .title .iconesNexPre{
+    display: inline-block;
+    color: #333;
+    margin-left: 30px;
+}
+#loja .produtos .title .iconesNexPre i{
+    margin-left: 10px;
+}
+
+#loja .produtos .listaPlant{
+    width: 100%;
+    margin-top: 4%;
+}
+
+#loja .produtos .listaPlant .itemPlant{
+    width: 30%;
+    padding: 10px;
+    display: inline-block;
+}
+
+#loja .produtos .listaPlant .itemPlant .imgPlant{
+    width: 70%;
+    margin: auto;
+}
+
+#loja .produtos .listaPlant .itemPlant .imgPlant img{
+    width: 100%;
+}
+
+#loja .produtos .listaPlant .itemPlant .nomePlant{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+#loja .produtos .listaPlant .itemPlant .precoPlant{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    color: #555;
+}
+#loja .produtos .listaPlant .itemPlant .precoPlant b{
+    color: darkgreen;
+    font-size: 1rem;
+}
+
+#loja .produtos .listaPlant .itemPlant button{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+    border: 1px solid darkgreen;
+    color: darkgreen;
+    padding: 5px 16px;
+    font: 0.7rem;
+    border-radius: 20px;
+    background-color: transparent;
+}
